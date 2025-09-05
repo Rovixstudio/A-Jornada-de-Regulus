@@ -7,30 +7,24 @@
   --accent-2:#7c3aed;
   --success:#10b981;
   --danger:#ef4444;
-  --glass: rgba(255,255,255,0.02);
 }
 
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
   margin:0;
-  font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-family:Inter, Arial, sans-serif;
   background: linear-gradient(160deg,var(--bg-1),var(--bg-2));
   color:#e6eef6;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
   padding:24px;
 }
 
-.container{
-  max-width:980px;
-  margin:0 auto;
-}
+.container{max-width:980px; margin:0 auto}
 
 /* Card */
 .card{
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  border:1px solid rgba(255,255,255,0.03);
+  background: rgba(255,255,255,0.02);
+  border:1px solid rgba(255,255,255,0.05);
   padding:18px;
   border-radius:12px;
   margin-bottom:18px;
@@ -38,71 +32,53 @@ body{
 }
 
 /* Header */
-.header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
+.header{display:flex; justify-content:space-between; align-items:center}
 .header h1{margin:0; font-size:1.6rem}
 .muted{color:var(--muted); font-size:0.9rem}
 
 /* Status */
-.status{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:12px;
-}
+.status{display:grid; grid-template-columns:repeat(3,1fr); gap:12px}
 .status-item .label{font-size:0.85rem; color:var(--muted)}
 .status-item .value{font-size:1.4rem; font-weight:700; margin-top:6px}
-.progress{
-  height:8px; background:rgba(255,255,255,0.03); border-radius:999px; overflow:hidden; margin-top:8px;
-}
-.progress-fill{
-  height:100%; background:linear-gradient(90deg,var(--accent),#0ea5e9); width:0%;
-}
+.progress{height:8px; background:rgba(255,255,255,0.05); border-radius:999px; overflow:hidden; margin-top:8px}
+.progress-fill{height:100%; background:linear-gradient(90deg,var(--accent),#0ea5e9); width:0%}
 
 /* Challenge */
-.challenge h2{margin:0 0 8px 0}
-.problem{font-size:1.05rem; margin:0 0 12px 0}
+.problem{font-size:1.05rem; margin-bottom:12px}
 .controls{display:flex; gap:12px; flex-wrap:wrap}
 input{
   flex:1 1 260px;
   padding:12px 14px;
   border-radius:10px;
-  border:1px solid rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.1);
   background:var(--card);
   color:inherit;
   font-size:1rem;
-  outline:none;
 }
-input:focus{box-shadow:0 0 0 4px rgba(2,132,199,0.08); border-color:var(--accent)}
+input:focus{border-color:var(--accent)}
 
 .btns{display:flex; gap:8px}
 .btn{
   padding:10px 14px;
   border-radius:10px;
-  border:1px solid rgba(255,255,255,0.03);
   background:transparent;
+  border:1px solid rgba(255,255,255,0.1);
   color:inherit;
   cursor:pointer;
   font-weight:600;
 }
 .btn.small{padding:8px 10px; font-size:0.9rem}
-.btn.primary{background:linear-gradient(90deg,var(--accent),#0ea5e9); color:#fff; border:none}
-.btn.hint{background:linear-gradient(90deg,var(--accent-2),#a78bfa); color:#fff; border:none}
+.btn.primary{background:var(--accent); color:#fff; border:none}
+.btn.hint{background:var(--accent-2); color:#fff; border:none}
 
 /* hint & feedback */
-.hintBox{margin-top:12px; padding:10px; border-radius:8px; background: rgba(124,58,237,0.08); color:#ddd; border:1px solid rgba(124,58,237,0.12)}
+.hintBox{margin-top:12px; padding:10px; border-radius:8px; background: rgba(124,58,237,0.1)}
 .feedback{margin-top:12px; min-height:36px}
-.feedback.ok{background: rgba(16,185,129,0.08); color:var(--success); padding:10px; border-radius:8px; border:1px solid rgba(16,185,129,0.12)}
-.feedback.bad{background: rgba(239,68,68,0.06); color:var(--danger); padding:10px; border-radius:8px; border:1px solid rgba(239,68,68,0.12)}
-
-/* Milestones */
-.milestones ul{margin:6px 0 0 18px}
-.small{font-size:0.85rem}
+.feedback.ok{color:var(--success)}
+.feedback.bad{color:var(--danger)}
 
 /* Footer */
-.footer{display:flex; justify-content:center; align-items:center; font-size:0.9rem; color:var(--muted)}
+.footer{text-align:center; font-size:0.9rem; color:var(--muted)}
 
 /* Responsive */
 @media (max-width:880px){
