@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>A Jornada de Regulus — Jogo da Regra de 3</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app container">
+    <header class="header card">
+      <div>
+        <h1>A Jornada de Regulus</h1>
+        <p class="muted">Aprenda Regra de 3 jogando — resolva, ganhe XP e suba de nível.</p>
+      </div>
+      <button id="resetBtn" class="btn small">Resetar</button>
+    </header>
+
+    <section class="status card">
+      <div class="status-item">
+        <div class="label">Nível</div>
+        <div id="level" class="value">1</div>
+        <div id="levelName" class="small muted">Vilarejo dos Números</div>
+      </div>
+      <div class="status-item">
+        <div class="label">XP</div>
+        <div id="xp" class="value">0</div>
+        <div class="progress">
+          <div id="progressBar" class="progress-fill" style="width:0%"></div>
+        </div>
+        <div class="small muted">Próx: <span id="nextTarget">100</span> XP</div>
+      </div>
+      <div class="status-item">
+        <div class="label">Streak</div>
+        <div id="streak" class="value">0</div>
+        <div class="small muted">Questões resolvidas: <span id="solved">0</span></div>
+      </div>
+    </section>
+
+    <section class="challenge card">
+      <h2 id="levelTitle">Vilarejo dos Números</h2>
+      <p id="problemText" class="problem">Carregando problema...</p>
+
+      <div class="controls">
+        <input id="answerInput" inputmode="numeric" placeholder="Digite sua resposta" />
+        <div class="btns">
+          <button id="checkBtn" class="btn primary">Verificar</button>
+          <button id="skipBtn" class="btn">Pular (-5 XP)</button>
+          <button id="hintBtn" class="btn hint">Dica</button>
+        </div>
+      </div>
+
+      <div id="hintBox" class="hintBox" hidden>
+        <strong>Dica:</strong> <span id="hintText"></span>
+      </div>
+
+      <div id="feedback" class="feedback" aria-live="polite"></div>
+    </section>
+
+    <section class="milestones card">
+      <h3>Marcos & Como subir de nível</h3>
+      <ul>
+        <li>Lv.1 — Regra de 3 direta simples.</li>
+        <li>Lv.2 — Números maiores / decimais.</li>
+        <li>Lv.3 — Proporção inversa (trabalho/tempo).</li>
+        <li>Lv.4 — Proporção composta.</li>
+        <li>Lv.5 — Aplicações (perdas, porcentagens).</li>
+      </ul>
+      <div class="small muted">Ganhe XP resolvendo desafios. Sem dica: +10 XP. Rápido (&le;15s): +10 XP.</div>
+    </section>
+
+    <footer class="card footer">
+      <div>© A Jornada de Regulus — Criador: Rodrigo Melo</div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
